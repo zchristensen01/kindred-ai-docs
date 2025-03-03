@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useRef, useEffect } from "react";
 
 const StripeStyleDocs = () => {
   // useState hook to manage which page is currently active
@@ -4974,7 +4973,7 @@ const StripeStyleDocs = () => {
   
   
   // Sidebar navigation component
-  const Sidebar = ({ activePage, setActivePage }) => (
+  const Sidebar = () => (
     <div className="w-64 bg-white border-r border-gray-200 h-screen overflow-y-auto sticky top-0">
       <div className="p-4 border-b border-gray-200">
         <h1 className="text-lg font-semibold text-gray-800">Kindred AI API</h1>
