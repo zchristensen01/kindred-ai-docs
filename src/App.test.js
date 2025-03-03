@@ -1,3 +1,5 @@
+// a Jest test file to check if App.js loads correctly
+
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
