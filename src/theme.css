@@ -1,0 +1,62 @@
+:root {
+    /* These are the default dark mode colors */
+    --primary: #4a6fa5;
+    --secondary: #e78188;
+    --background: #111827;
+    --sidebar: #1f2937;
+    --text: #f3f4f6;
+    --textSecondary: #9ca3af;
+    --border: #374151;
+    --codeBackground: #374151;
+    --codeText: #f3f4f6;
+    --activeNav: #172554;
+    --activeNavText: #93c5fd;
+    --hoverNav: #374151;
+  }
+  
+  /* Custom scrollbar for the sidebar */
+.sidebar-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--background) var(--codeBackground);
+}
+
+
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: var(--codeBackground);
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--activeNav);
+}
+
+/* For the main content */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--activeNav) var(--background);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--codeBackground);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--activeNav);
+  border-radius: 6px;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color:var(--background) var(--codeBackground);
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--codeBackground);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--activeNav);
+  }

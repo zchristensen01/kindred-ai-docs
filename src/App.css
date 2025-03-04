@@ -38,3 +38,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/index.css or src/App.css */
+:root {
+  --primary: #4a6fa5;
+  --secondary: #e78188;
+  --background: #111827;
+  --sidebar: #1f2937;
+  --text: #f3f4f6;
+  --textSecondary: #9ca3af;
+  --border: #374151;
+  --codeBackground: #374151;
+  --codeText: #f3f4f6;
+  --activeNav: #172554;
+  --activeNavText: #93c5fd;
+  --hoverNav: #374151;
+}
