@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kindred-ai-docs/static/css/main.1c23d80f.css",
-    "main.js": "/kindred-ai-docs/static/js/main.69ccc6fb.js",
+    "main.css": "/kindred-ai-docs/static/css/main.5f623e4c.css",
+    "main.js": "/kindred-ai-docs/static/js/main.f398d2bd.js",
     "static/js/453.efb9a8ad.chunk.js": "/kindred-ai-docs/static/js/453.efb9a8ad.chunk.js",
     "index.html": "/kindred-ai-docs/index.html",
-    "main.1c23d80f.css.map": "/kindred-ai-docs/static/css/main.1c23d80f.css.map",
-    "main.69ccc6fb.js.map": "/kindred-ai-docs/static/js/main.69ccc6fb.js.map",
+    "main.5f623e4c.css.map": "/kindred-ai-docs/static/css/main.5f623e4c.css.map",
+    "main.f398d2bd.js.map": "/kindred-ai-docs/static/js/main.f398d2bd.js.map",
     "453.efb9a8ad.chunk.js.map": "/kindred-ai-docs/static/js/453.efb9a8ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c23d80f.css",
-    "static/js/main.69ccc6fb.js"
+    "static/css/main.5f623e4c.css",
+    "static/js/main.f398d2bd.js"
   ]
 }
