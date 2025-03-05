@@ -4984,103 +4984,46 @@ const Sidebar = () => {
   return (
     <div className="w-64 bg-[var(--sidebar)] border-r border-[var(--border)] h-screen overflow-y-auto sticky top-0 sidebar-scrollbar">
       <div className="p-4 border-b border-[var(--border)]">
-        <div className="flex items-center">
-          {/* Logo with salmon background if image doesn't load */}
-          <div className="bg-[var(--secondary)] rounded w-10 h-10 flex items-center justify-center mr-3">
-            <img 
-              src={`${process.env.PUBLIC_URL}/k-icon.jpeg`} 
-              alt="Kindred AI" 
-              className="w-10 h-10 rounded" 
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.parentNode.innerHTML = '<span class="text-white text-2xl font-bold">k</span>';
-              }}
-            />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="bg-[var(--secondary)] rounded w-10 h-10 flex items-center justify-center mr-3">
+              <img 
+                src={`${process.env.PUBLIC_URL}/k-icon.jpeg`} 
+                alt="Kindred AI" 
+                className="w-10 h-10 rounded" 
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentNode.innerHTML = '<span class="text-white text-2xl font-bold">k</span>';
+                }}
+              />
+            </div>
+            
+            <div>
+              <h1 className="text-lg font-semibold text-[var(--primary)]">Kindred API</h1>
+              <p className="text-sm text-[var(--textSecondary)]">Documentation</p>
+            </div>
           </div>
           
-          {/* Title section */}
-          <div>
-            <div className="flex items-center">
-              <h1 className="text-lg font-semibold text-[var(--primary)]">Kindred AI API</h1>
-              
-              {/* Toggle right next to title */}
-              <button 
-                onClick={toggleTheme}
-                className="ml-2 rounded-full bg-[var(--codeBackground)] p-1 flex items-center w-8 justify-start"
-                aria-label="Toggle theme"
-              >
-                <div className={`w-5 h-5 rounded-full transition-all duration-300 flex items-center justify-center ${darkMode ? 'bg-[#2a4365] transform translate-x-1.5' : 'bg-[#ffc107] transform translate-x-0'}`}>
-                  {darkMode ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[#663c00]" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                    </svg>
-                  )}
-                </div>
-              </button>
+          {/* Toggle next to title, with original width */}
+          <button 
+            onClick={toggleTheme}
+            className="rounded-full bg-[var(--codeBackground)] p-1 flex items-center w-12 justify-start"
+            aria-label="Toggle theme"
+          >
+            <div className={`w-5 h-5 rounded-full transition-all duration-300 flex items-center justify-center ${darkMode ? 'bg-[#2a4365] transform translate-x-5' : 'bg-[#ffc107] transform translate-x-0'}`}>
+              {darkMode ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[#663c00]" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                </svg>
+              )}
             </div>
-            <p className="text-sm text-[var(--textSecondary)]">Documentation</p>
-          </div>
+          </button>
         </div>
       </div>
-        
-        {/* About the API section */}
-        <div className="p-4 border-b border-[var(--border)]">
-          <h2 className="text-md font-semibold text-[var(--primary)] mb-2">About the API</h2>
-          <ul className="space-y-1">
-            <li>
-              <button
-                onClick={() => setActivePage('introduction')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'introduction' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Introduction
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setActivePage('authentication')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'authentication' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Authentication
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setActivePage('errors')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'errors' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Errors & Responses
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setActivePage('versioning')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'versioning' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Versioning
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setActivePage('rate-limits')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'rate-limits' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Rate Limits
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setActivePage('request-ids')}
-                className={`w-full text-left px-2 py-1 text-sm rounded ${activePage === 'request-ids' ? 'bg-[var(--activeNav)] text-[var(--activeNavText)] font-medium' : 'text-[var(--textSecondary)] hover:bg-[var(--hoverNav)]'}`}
-              >
-                Request IDs & Metadata
-              </button>
-            </li>
-          </ul>
-        </div>
         
         {/* AI Assistant section */}
         <div className="p-4 border-b border-[var(--border)]">
